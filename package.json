@@ -1,0 +1,28 @@
+{
+  "name": "curriculum-backend-design-patterns",
+  "version": "1.0.0",
+  "description": "Practice Design Patterns",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "lint": "eslint --ignore-path .gitignore .",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json)\"",
+    "validate": "npm run format && npm run lint",
+    "validate-staged": "lint-staged",
+    "postinstall": "husky install && husky add .husky/pre-commit \"npm run validate-staged\""
+  },
+  "author": "Re:Coded",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^4.1.2",
+    "mongoose": "^6.0.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.6.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.6",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.5.1"
+  }
+}
